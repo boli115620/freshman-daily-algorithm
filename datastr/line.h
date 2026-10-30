@@ -233,3 +233,19 @@ void DestroyList(LineList *list)
     free(list);//释放线性表的存储空间
     list=NULL;//将指针置为空
 }
+//9.打印线性表
+void PrintList(LineList *list)
+{
+    //判断线性表是否存在
+    if(list ==NULL)
+    {
+        printf("线性表不存在！\n");
+        return;
+    }
+    printf("线性表中的元素为：");
+    for(int i=0;i<list->num;i++)
+    {
+        printf("%d ",list->arr[i]);
+    }
+    printf("\n");
+}
